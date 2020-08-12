@@ -14,7 +14,7 @@ export const store = new Vuex.Store({
     },
     actions :{
         async fetchProject({commit}){
-            var response = await Axios.post('http://localhost:8933/project');
+            var response = await Axios.post('/project');
             console.log(response.data)
             commit('setProject',response.data);
         }
