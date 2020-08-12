@@ -3,7 +3,7 @@
     <HelloWorld/>
     <Home/>
     <AboutMe/>
-    <!--<project/>-->
+    <project/>
     <contact/>
     <footer1/>
   </div>
@@ -13,11 +13,9 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Home from './components/Home.vue'
 import AboutMe from './components/AboutMe.vue'
-//import project from './components/project.vue'
+import project from './components/project.vue'
 import contact from './components/contact.vue'
 import footer1 from './components/footer.vue'
-//import dp from './components/dp.vue'
-
 
 export default {
   name: 'App',
@@ -25,10 +23,10 @@ export default {
     HelloWorld,
     Home,
     AboutMe,
-   // project,
+    project,
     contact,
     footer1,
-   // dp
+   
     
   }
 }

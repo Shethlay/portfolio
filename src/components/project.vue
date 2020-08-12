@@ -17,7 +17,7 @@
             
             <div class="row outer">
                 <div class="inner">
-                    <div v-for="proj in fetchProject1" :key='proj.id' class="main">
+                    <div v-for="proj in fetchProject1.slice(0,fetchProject1.length)" :key='proj.id' class="main">
                         <div class="row title"><p><b><u>{{proj.title}}</u></b></p></div>
                         <div class="row TT">Tools and Technology:</div>
                         <div class="row "><p>{{proj.tat}}</p></div>

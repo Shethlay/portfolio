@@ -64,7 +64,7 @@ export default {
     name:'AboutMe',
     data(){
         return{
-            url:'http://localhost:5000/resume.pdf'
+            url:'http://localhost:5000/resume'
         }
     },
     methods:{
@@ -72,19 +72,19 @@ export default {
             const url = window.URL.createObjectURL(new Blob([response.data]))
             const link = document.createElement('a')
             link.href = url
-            link.setAttribute('download','LaySheth.pdf')
+            link.setAttribute('download','layResume.pdf')
             document.body.appendChild(link)
             link.click()
         },
         onClick(){
             this.axios({
-                method:'get',
+                method:'post',
                 url: this.url,
                 responseType: 'arraybuffer'
             })
             .then(response => {
                 this.forceFileDownload(response)
-            }).catch(()=> console.log('error'))
+            }).catch((err)=> console.log(err))
         }
     }
 }
