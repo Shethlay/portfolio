@@ -110,8 +110,8 @@ export default {
             .then(()=>{
                 this.$alert("Message Send Successfuly","Success",'success')
             })
-            .catch(()=>{
-                 this.$alert("Sorry something went Wrong","OOPs..",'error')
+            .catch((err)=>{
+                 this.$alert(err,'error')
             })
 
         }
