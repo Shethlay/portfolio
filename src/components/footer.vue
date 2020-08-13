@@ -24,6 +24,9 @@
           <a class="ins-ic" href="https://www.instagram.com/sheth_lay/">
             <i class="fab fa-instagram fa-lg  mr-md-5 mr-3 fa-2x"> </i>
           </a>
+          <a class="git-ic" href="https://github.com/Shethlay">
+            <i class="fab fa-github fa-lg  mr-md-5 mr-3 fa-2x"> </i>
+          </a>
         </div>
       </div>
       <!-- Grid column -->
@@ -74,5 +77,10 @@ export default {
   transition-duration: .2s;
   height: inherit;
 }
-
+.fa-github:hover{
+color: #7DBBE6;
+  font-size: 40px;
+  transition-duration: .2s;
+  height: inherit;
+}
 </style>
