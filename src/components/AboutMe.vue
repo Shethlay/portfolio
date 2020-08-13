@@ -24,7 +24,7 @@
                 
                 <div class="row text-danger who">Who am i?</div>
                 <div class="row intro">I am lay sheth, IT engineering student.</div>
-                <div class="row content">Currently I am pursing my btech in Information Technology at Charotar university of science and Technology. I like to do coding. I want to become full stack Developer. I am seeking for a internship. </div>
+                <div class="row content">Currently I am pursing my B-Tech in Information Technology at Charotar University of science and Technology. I like to do coding. I want to become full stack Developer. I am seeking for a internship. </div>
                 
                 <hr class="hr1">
 
