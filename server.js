@@ -17,7 +17,7 @@ res.sendFile(path.join(__dirname,'/dist/index.html'))
 
 
 app.post('/resume',function(req,res){
-	res.sendFile(__dirname+'/layResume.pdf')
+	res.sendFile('/layResume.pdf')
 })
 
 
