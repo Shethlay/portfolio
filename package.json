@@ -58,5 +58,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "proxy": "http://localhost:8933/"
+  "proxy": "http://localhost:8933"
 }
