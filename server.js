@@ -17,7 +17,12 @@ res.sendFile(path.join(__dirname,'/dist/index.html'))
 
 
 app.post('/resume',function(req,res){
+<<<<<<< HEAD
 	res.sendFile('/layResume.pdf')
+=======
+    console.log('heyy')
+	res.sendFile(__dirname+'/layResume.pdf')
+>>>>>>> 93356f16... my changes
 })
 
 
@@ -42,7 +47,6 @@ app.post('/project',function(req,res){
                  description:'The task to create a portal for management of student led activities at university/schools.My role is backend developer and database manager.'
             }
     ]
-    console.log(project)
     res.send(project)
 })
 
