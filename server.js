@@ -17,12 +17,12 @@ res.sendFile(path.join(__dirname,'/dist/index.html'))
 
 
 app.post('/resume',function(req,res){
-<<<<<<< HEAD
+
 	res.sendFile('/layResume.pdf')
-=======
+
     console.log('heyy')
 	res.sendFile(__dirname+'/layResume.pdf')
->>>>>>> 93356f16... my changes
+
 })
 
 
