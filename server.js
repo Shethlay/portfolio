@@ -28,19 +28,19 @@ app.post('/project',function(req,res){
                 id: 1,
                 title: 'Extra Curricular Events Management System',
                 tat: 'Node.js,Express.js,Mongodb,React,js',
-                description:'Extra curricular events management system is a portal that manages student-led activities at universitiesand schools. My role is backend developer and database manager. This my internship project. '
+                description:'Extra curricular events management system is a portal that manages student-led activities at universitiesand schools. My role is backend developer and database manager. This is my internship project. '
             },
 	    {
                 id: 2,
                 title: 'Temperature Monitoring System',
                 tat: 'Ardiuno,Nodemcu,Php,html,css,js',
-                description:'emperature Monitoring System (12/2019 - 03/2020)The temperature monitoring system is a website that shows the real-time temperature of any Industry ormechanical company. It also sends the notification if the temperature goes beyond a certain limit.'
+                description:'The temperature monitoring system is a website that shows the real-time temperature of any Industry ormechanical company. It also sends the notification if the temperature goes beyond a certain limit.'
             },
             {   
                 id: 3,
                 title: 'Student Report Card',
                 tat: 'C++',
-                description:'Student report card system is CLI program that takes the input from user/teacher (input like: studentname,  roll-no,  mark  etc).  Based  on  input  it  will  generate  the  report  card  in  good  format'
+                description:'Student report card system is CLI program that takes the input from user/teacher (input like: studentname,  roll-no,  mark  etc).  Based  on  input  it  will  generate  the  report  card  in  good  format.'
             }
             
     ]
