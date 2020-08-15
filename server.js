@@ -24,24 +24,25 @@ app.post('/resume',function(req,res){
 
 app.post('/project',function(req,res){
     var project = [  
-            {
+            {       
                 id: 1,
+                title: 'Extra Curricular Events Management System',
+                tat: 'Node.js,Express.js,Mongodb,React,js',
+                description:'Extra curricular events management system is a portal that manages student-led activities at universitiesand schools. My role is backend developer and database manager. This my internship project. '
+            },
+	    {
+                id: 2,
                 title: 'Temperature Monitoring System',
                 tat: 'Ardiuno,Nodemcu,Php,html,css,js',
-                description:'In this project we use Arduino , LM35 temperature sensor, nodemcu to detect thetemperature and for showing that temperature we make one website using html ,css , js ,php and mysql.'
+                description:'emperature Monitoring System (12/2019 - 03/2020)The temperature monitoring system is a website that shows the real-time temperature of any Industry ormechanical company. It also sends the notification if the temperature goes beyond a certain limit.'
             },
             {   
-                id: 2,
-                title: 'Student Report card',
-                tat: 'C++',
-                description:'This project is simple CLI based project.in this project using student data wegenerate the report card of students.This project is implemented in c++'
-            },
-            {       
                 id: 3,
-                title: 'Extra Curricular Events Management System',
-                 tat: 'Node.js,Express.js,Mongodb,React,js',
-                 description:'The task to create a portal for management of student led activities at university/schools.My role is backend developer and database manager.'
+                title: 'Student Report Card',
+                tat: 'C++',
+                description:'Student report card system is CLI program that takes the input from user/teacher (input like: studentname,  roll-no,  mark  etc).  Based  on  input  it  will  generate  the  report  card  in  good  format'
             }
+            
     ]
     res.send(project)
 })
