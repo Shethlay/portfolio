@@ -130,11 +130,11 @@ export default {
 .row1{
     font-size: 40px;
     font-weight: bolder;
-    padding-left: 10%;
+    padding-left: 6%;
     padding-top: 40px;
 }
 .showcase{
-    padding-left: 10%;
+    padding-left: 6%;
 }
 .row2{
     margin: auto auto 50px 6%;
@@ -147,6 +147,10 @@ export default {
     padding-left: 10px;
     padding-top: 10px;
 }
+.col-md-4{
+    padding-left: 6%;
+}
+
 
 
 </style>

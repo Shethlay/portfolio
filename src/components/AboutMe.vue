@@ -19,7 +19,7 @@
 
         <div class="row row3">
 
-            <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4"><img src="123.jpg" height="535px" width="430px" class="photo img-fluid"></div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4"><img src="123.jpg"  width="430px" class="photo img-fluid"></div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8 ">
                 
                 <div class="row text-danger who">Who am i?</div>
@@ -111,9 +111,6 @@ export default {
     padding-left: 6%;
 }
 
-.row1{
-    padding-top: 40px;
-}
 
 .row{
     width: inherit;

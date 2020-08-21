@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyparser = require('body-parser');
 const path = require('path');
 const serverStatic = require('serve-static')
+var fs = require('fs')
 
 app.use(cors());
 app.use(bodyparser.urlencoded({extended:true}));
@@ -23,29 +24,44 @@ app.post('/resume',function(req,res){
 
 
 app.post('/project',function(req,res){
+    
+	
+	const ecms= fs.readFileSync('ECMS.jpg','base64');
+	const tms= fs.readFileSync('TMS.jpg','base64');
+	const report= fs.readFileSync('report.png','base64');
     var project = [  
             {       
                 id: 1,
                 title: 'Extra Curricular Events Management System',
                 tat: 'Node.js,Express.js,Mongodb,React,js',
-                description:'Extra curricular events management system is a portal that manages student-led activities at universitiesand schools. My role is backend developer and database manager. This is my internship project. '
+                description:"Extra curricular events management system” is a web app specially created for universities/schools.The web app is developed for both the student and the Management. The system will have a secure loginprocedure to prevent any unauthorized access. Every type of user (student, Event organizer, Admin) will havedifferent privileges according to their need to know. The system will have an event booking facility. The studentwill be able to book an event online. The event organizer will add(upload) all the upcoming events and thetudents will be able to book those events from the web app by login using their name and password. The eventorganizer will also be able to book for events for the students. They will be able to add events, update events,and delete events. Add client information, update client information. Add new staff to the system. The systemwill send a notification to all the students and the event organizer.The system will have a secure login procedure to prevent unauthorized access. Before booking and",
+            	glink:"https://github.com/Shethlay/ECEMS",
+            	image: ecms
             },
 	    {
                 id: 2,
                 title: 'Temperature Monitoring System',
                 tat: 'Ardiuno,Nodemcu,Php,html,css,js',
-                description:'The temperature monitoring system is a website that shows the real-time temperature of any Industry ormechanical company. It also sends the notification if the temperature goes beyond a certain limit.'
+                description:'The temperature monitoring system is a website that shows the real-time temperature of any Industry ormechanical company. It also sends the notification if the temperature goes beyond a certain limit.',
+            	glink:"#",
+            	image: tms
             },
             {   
                 id: 3,
                 title: 'Student Report Card',
                 tat: 'C++',
-                description:'Student report card system is CLI program that takes the input from user/teacher (input like: studentname,  roll-no,  mark  etc).  Based  on  input  it  will  generate  the  report  card  in  good  format.'
+                description:'Student report card system is CLI program that takes the input from user/teacher (input like: studentname,  roll-no,  mark  etc).  Based  on  input  it  will  generate  the  report  card  in  good  format.',
+            	glink:"https://github.com/Shethlay/Student-report-card-system",
+            	image: report
             }
             
     ]
+
     res.send(project)
 })
+
+
+
 
 
 

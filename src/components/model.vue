@@ -1,16 +1,7 @@
-<script>
-  export default {
-    name: 'model',
-    methods: {
-      close() {
-        this.$emit('close');
-      },
-    },
-    props:['id']
-  };
-</script>
+
 <template>
-  <transition name="modal-fade">
+
+<transition name="modal-fade">
     <div class="modal-backdrop">
       <div class="modal"
         role="dialog"
@@ -18,52 +9,88 @@
         aria-describedby="modalDescription"
       >
         <header
-          class="modal-header"
+          class="modal-header row1"
           id="modalTitle"
         >
           <slot name="header">
-            {{id}}
-          
+            <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-12 col-xl-12">
+            {{data.title}}
+            </div>
+            <div class="col-xs-6 col-sm-6"></div>
+            </div>
             <button
               type="button"
               class="btn-close"
               @click="close"
               aria-label="Close modal"
             >
-              x
+              X
             </button>
           </slot>
         </header>
+        <perfect-scrollbar>
         <section
           class="modal-body"
           id="modalDescription"
         >
           <slot name="body">
-              I m working on this 
-              stay updated
+            <div class="row row3">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
+                <img :src="`data:image/jpg;base64,${data.image}`" height="auto" width="430px" class="photo img-fluid"/>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8">
+                <div class="row text-danger who">Tools and Technology:<br>{{data.tat}}</div>
+                <div class="row content">Description:</div>
+                <div class="row content">{{data.description}}</div>
+                <hr>
+                <div class="row CV">
+                  <div class="col-sm-12 col-xs-12 col-md-12 col-xl-12">
+                    Github Link:<a :href="data.glink">{{data.glink}}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </slot>
         </section>
+        </perfect-scrollbar>
         <footer class="modal-footer">
           <slot name="footer">
-           I m working on this 
-              stay updated
-
-            <button
-              type="button"
-              class="btn-green"
-              @click="close"
-              aria-label="Close modal"
-            >
-              Close me!
-            </button>
+            <button type="button" class="btn-green" @click="close" aria-label="Close modal">Close me!</button>
           </slot>
         </footer>
       </div>
     </div>
   </transition>
 </template>
-<style>
-  .modal-backdrop {
+
+<script>
+  export default {
+    name: 'model',
+    props: ['data'],
+    methods: {
+      close() {
+        this.$emit('close');
+      },
+    },
+  };
+</script>
+
+
+
+
+<style scoped>
+
+.aa{
+    text-decoration: none;
+    color: black;
+    
+}
+.btn{
+    border-radius: 25px;
+    
+}
+.modal-backdrop {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -73,6 +100,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    
   }
 
   .modal {
@@ -81,28 +110,38 @@
     overflow-x: auto;
     display: flex;
     flex-direction: column;
+    
   }
 
   .modal-header,
   .modal-footer {
     padding: 15px;
     display: flex;
+    
   }
 
   .modal-header {
     border-bottom: 1px solid #eeeeee;
     color: #4AAE9B;
     justify-content: space-between;
+    
   }
-
+  .row1{
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left: 6%;
+    padding-top: 40px;
+}
   .modal-footer {
     border-top: 1px solid #eeeeee;
-    justify-content: flex-end;
+    
   }
 
   .modal-body {
     position: relative;
     padding: 20px 10px;
+    height: 670px;
+   
   }
 
   .btn-close {
@@ -113,6 +152,7 @@
     font-weight: bold;
     color: #4AAE9B;
     background: transparent;
+    
   }
 
   .btn-green {
@@ -120,5 +160,44 @@
     background: #4AAE9B;
     border: 1px solid #4AAE9B;
     border-radius: 2px;
+    
   }
+  .photo{
+    border: 2px solid black ;
+    border-radius: 5px;
+    max-width: 100%; 
+    height: auto;
+    margin: auto;
+    
+}
+
+.row3{
+    padding-top: 55px;
+    margin-bottom: 80px;
+    
+}
+.col-md-4{
+    padding-left: 6%;
+}
+.who{
+    padding-left: 6.47%;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 25px auto 8px auto;
+}
+.content{
+     padding-left: 6.47%;
+     line-height: 1.8;
+     font-size: 18px;
+     margin: auto;
+     
+}
+.CV{
+    margin-top: 50px;
+    padding-left:6.47% ;
+}
+.row{
+  width: inherit;
+}
+ 
 </style>
