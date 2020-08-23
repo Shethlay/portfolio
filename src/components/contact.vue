@@ -21,7 +21,7 @@
         <div class="col-md-9 mb-md-0 mb-5">
             <form id="contact-form" name="contact-form" @submit="onSubmit">
 
-                <!--Grid row-->
+                
                 <div class="row row3">
 
                     <!--Grid column-->
