@@ -42,7 +42,7 @@
               <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8">
                 <div class="row text-danger who">Tools and Technology:<br>{{data.tat}}</div>
                 <div class="row content">Description:</div>
-                <div class="row content">{{Bdata.data.description}}</div>
+                <div class="row content">{{data.description}}</div>
                 <hr>
                 <div class="row CV">
                   <div class="col-sm-12 col-xs-12 col-md-12 col-xl-12">
