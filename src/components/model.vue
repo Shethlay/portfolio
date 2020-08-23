@@ -46,7 +46,7 @@
                 <hr>
                 <div class="row CV">
                   <div class="col-sm-12 col-xs-12 col-md-12 col-xl-12">
-                    Github Link:<a :href="Bdata.data.glink">{{data.glink}}</a>
+                    Github Link:<a :href="data.glink">{{data.glink}}</a>
                   </div>
                 </div>
               </div>
