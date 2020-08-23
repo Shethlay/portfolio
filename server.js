@@ -22,6 +22,11 @@ app.post('/resume',function(req,res){
 
 })
 
+	
+
+
+app.post('/project',function(req,res){
+	
 	const ecms= fs.readFileSync('ECMS.jpg','base64');
 	const tms= fs.readFileSync('TMS.jpg','base64');
 	const report= fs.readFileSync('report.png','base64');
@@ -53,23 +58,6 @@ var project = [
             }
             
     ];
-
-
-app.post('/Idata',function(req,res){
-
-	console.log(req.query);
-	for(var i=0;i<project.length;i++){
-		console.log(typeof(project[i]));
-		if(req.query.id == project[i].id){
-			
-			return res.send(project[i])
-		}
-	}
-	
-
-})
-
-app.post('/project',function(req,res){
     
     res.send(project)
 })
