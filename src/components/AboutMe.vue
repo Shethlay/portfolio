@@ -64,7 +64,7 @@ export default {
     name:'AboutMe',
     data(){
         return{
-            url:'/resume'
+            url:'http://localhost:5000/resume'
         }
     },
     methods:{

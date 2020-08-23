@@ -101,7 +101,7 @@ export default {
                 this.$alert("You missing Something","OOPs",'error')
                 return
             }
-            this.axios.post('/addMessege',{
+            this.axios.post('http://localhost:5000/addMessege',{
                 name: this.fname,
                 email: this.femail,
                 subject: this.fsubject,

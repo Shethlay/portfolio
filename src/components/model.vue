@@ -15,7 +15,7 @@
           <slot name="header">
             <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-12 col-xl-12">
-            {{data.title}}
+            {{Bdata.data.title}}
             </div>
             <div class="col-xs-6 col-sm-6"></div>
             </div>
@@ -37,16 +37,16 @@
           <slot name="body">
             <div class="row row3">
               <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
-                <img :src="`data:image/jpg;base64,${data.image}`" height="auto" width="430px" class="photo img-fluid"/>
+                <img :src="`data:image/jpg;base64,${Bdata.data.image}`" height="auto" width="430px" class="photo img-fluid"/>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8">
-                <div class="row text-danger who">Tools and Technology:<br>{{data.tat}}</div>
+                <div class="row text-danger who">Tools and Technology:<br>{{Bdata.data.tat}}</div>
                 <div class="row content">Description:</div>
-                <div class="row content">{{data.description}}</div>
+                <div class="row content">{{Bdata.data.description}}</div>
                 <hr>
                 <div class="row CV">
                   <div class="col-sm-12 col-xs-12 col-md-12 col-xl-12">
-                    Github Link:<a :href="data.glink">{{data.glink}}</a>
+                    Github Link:<a :href="Bdata.data.glink">{{Bdata.data.glink}}</a>
                   </div>
                 </div>
               </div>
@@ -65,9 +65,18 @@
 </template>
 
 <script>
+import Axios from 'axios';
   export default {
     name: 'model',
-    props: ['data'],
+    props: ['ddata'],
+    data: function(){
+      return {
+        Bdata: Object
+      }
+    },
+    async created(){
+      this.Bdata = await Axios.post(`/Idata?id=${this.$props.ddata}`)
+    },
     methods: {
       close() {
         this.$emit('close');
@@ -80,6 +89,9 @@
 
 
 <style scoped>
+.ps{
+  height: auto;
+}
 
 .aa{
     text-decoration: none;
@@ -174,6 +186,7 @@
 .row3{
     padding-top: 55px;
     margin-bottom: 80px;
+    width: 100%;
     
 }
 .col-md-4{
