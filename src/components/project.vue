@@ -17,14 +17,14 @@
             
             <div class="row outer">
                 <div class="inner">
-                     <model v-if="isModalVisible" @close="closeModal"  :ddata="modalData" />
+                     <model v-if="isModalVisible" @close="closeModal"  :data="modalData" />
                     <div v-for="proj in fetchProject1.slice(0,fetchProject1.length)" :key='proj.id' class="main">
                         <div class="row title"><p><b><u>{{proj.title}}</u></b></p></div>
                         <div class="row TT">Tools and Technology:</div>
                         <div class="row "><p>{{proj.tat}}</p></div>
                         <div class="row DES">Description:</div>
                         <div class="row description"><p>{{proj.description}}</p></div>
-                        <div class="btn btn-info"  @click="showModal(proj.id)"  >Know more!</div>
+                        <div class="btn btn-info"  @click="showModal(proj)"  >Know more!</div>
                     </div> 
                    
                 </div>
