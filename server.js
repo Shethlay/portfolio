@@ -4,8 +4,10 @@ const cors = require('cors');
 const bodyparser = require('body-parser');
 const path = require('path');
 const serverStatic = require('serve-static')
+const compression = require('compression')
 var fs = require('fs')
 
+app.use(compression());
 app.use(cors());
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json());
@@ -65,11 +67,11 @@ var project = [
 
 
 
-var message = [];
+
 
 
 app.post('/addMessege',function(req,res){
-
+	var message = [];
     console.log(req.body)
 	message.push(req.body);
     res.send(true)
