@@ -65,12 +65,13 @@ var project = [
 
 
 
-
+var message = [];
 
 
 app.post('/addMessege',function(req,res){
 
     console.log(req.body)
+	message.push(req.body);
     res.send(true)
 })
 
