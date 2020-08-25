@@ -35,7 +35,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control" placeholder="E-mail" v-model="femail">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" v-model="femail">
                         </div>
                     </div>
                     <!--Grid column-->
