@@ -6,7 +6,7 @@ const path = require('path');
 const serverStatic = require('serve-static')
 const compression = require('compression')
 var fs = require('fs')
-var nodemailer = require('nodemailer')
+
 
 app.use(compression());
 app.use(cors());
@@ -74,28 +74,7 @@ app.post('/project',function(req,res){
 app.post('/addMessege',function(req,res){
 	
 
-	var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'mynameissheth@gmail.com',
-    pass: 'laysheth@1234'
-  }
-});
-
-var mailOptions = {
-  from: 'mynameissheth@gmail.com',
-  to: 'laysheth58@gmail.com',
-  subject: 'New notfication',
-  text: JSON.stringify(req.body)
-};
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-}); 
+	console.log(req.body)
     res.send(true)
 })
 
