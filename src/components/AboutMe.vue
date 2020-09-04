@@ -19,7 +19,7 @@
 
         <div class="row row3">
 
-            <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4"><v-lazy-image src="123.jpg"  width="430px" class="photo img-fluid"></v-lazy-image></div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4"><v-lazy-image src="123.jpg"  class="photo img-fluid"></v-lazy-image></div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8 ">
                 
                 <div class="row text-danger who">Who am i?</div>
