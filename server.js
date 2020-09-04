@@ -26,11 +26,7 @@ app.post('/resume',function(req,res){
 })
 
 	
-
-
-app.post('/project',function(req,res){
-	
-	const ecms= fs.readFileSync('ECMS.jpg','base64');
+const ecms= fs.readFileSync('ECMS.jpg','base64');
 	const tms= fs.readFileSync('TMS.jpg','base64');
 	const report= fs.readFileSync('report.png','base64');
 
@@ -61,6 +57,10 @@ var project = [
             }
             
     ];
+
+app.post('/project',function(req,res){
+	
+	
     
     res.send(project)
 })
@@ -83,8 +83,8 @@ app.post('/addMessege',function(req,res){
 });
 
 var mailOptions = {
-  from: 'laysheth58@gmail.com',
-  to: '18dit071@charusat.edu.in',
+  from: 'mynameissheth@gmail.com',
+  to: 'laysheth58@gmail.com',
   subject: 'New notfication',
   text: JSON.stringify(req.body)
 };

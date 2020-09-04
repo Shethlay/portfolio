@@ -37,7 +37,7 @@
           <slot name="body">
             <div class="row row3">
               <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
-                <img :src="`data:image/jpg;base64,${data.image}`" height="auto" width="430px" class="photo img-fluid"/>
+                <v-lazy-image :src="`data:image/jpg;base64,${data.image}`" height="auto" width="430px" class="photo img-fluid"></v-lazy-image>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8">
                 <div class="row text-danger who">Tools and Technology:<br>{{data.tat}}</div>
@@ -80,6 +80,15 @@
 
 
 <style scoped>
+v-lazy-image {
+  filter: blur(5px);
+  transition: filter 1.6s;
+  will-change: filter;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
+
 .ps{
   height: auto;
 }

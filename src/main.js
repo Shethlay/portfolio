@@ -6,12 +6,13 @@ import VueAxios from 'vue-axios'
 import VueSimpleAlert from 'vue-simple-alert'
 import PerfectScrollbar from 'vue2-perfect-scrollbar'
 import 'vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css'
+import { VLazyImagePlugin } from 'v-lazy-image';
 
 Vue.use(PerfectScrollbar)
 Vue.use(VueAxios, axios)
 Vue.use(VueSimpleAlert)
 Vue.config.productionTip = false
-
+Vue.use(VLazyImagePlugin);
 
 new Vue({
   store:store,

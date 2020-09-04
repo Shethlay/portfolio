@@ -19,7 +19,7 @@
 
         <div class="row row3">
 
-            <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4"><img src="123.jpg"  width="430px" class="photo img-fluid"></div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4"><v-lazy-image src="123.jpg"  width="430px" class="photo img-fluid"></v-lazy-image></div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8 ">
                 
                 <div class="row text-danger who">Who am i?</div>
@@ -94,6 +94,14 @@ export default {
 .about{
     width: 100%;
     
+}
+.v-lazy-image {
+  filter: blur(5px);
+  transition: filter 1.6s;
+  will-change: filter;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
 }
 .row1{
     font-size: 40px;
