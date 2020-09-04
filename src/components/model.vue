@@ -37,7 +37,7 @@
           <slot name="body">
             <div class="row row3">
               <div class="col-xs-12 col-sm-12 col-md-4 col-xl-4">
-                <v-lazy-image :src="`data:image/jpg;base64,${data.image}`" height="auto" class="photo img-fluid"></v-lazy-image>
+                <v-lazy-image :src="`data:image/jpg;base64,${data.image}`" class="photo img-fluid"></v-lazy-image>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-8 col-xl-8">
                 <div class="row text-danger who">Tools and Technology:<br>{{data.tat}}</div>
@@ -180,6 +180,7 @@ v-lazy-image {
     max-width: 100%; 
     height: auto;
     margin: auto;
+    width:430px;
     
 }
 
