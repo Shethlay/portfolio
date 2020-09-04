@@ -140,6 +140,7 @@ export default {
     max-width: 100%; 
     height: auto;
     margin: auto;
+    width:430px;
 }
 .aa{
     text-decoration: none;
