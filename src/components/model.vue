@@ -177,10 +177,11 @@ v-lazy-image {
   .photo{
     border: 2px solid black ;
     border-radius: 5px;
+    width:430px;
     max-width: 100%; 
     height: auto;
     margin: auto;
-    width:430px;
+    
     
 }
 
